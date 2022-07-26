@@ -8,6 +8,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-r", "--resolve", action="store_true", help="Used to resolve IPs for the given host")
     parser.add_argument("-p", "--portscan", action="store_true", help="Perform port scanning for te host IPs")
+    parser.add_argument("--ssllab", action="store_true", help="Perform SSLlab scan on the host.")
+    parser.add_argument("--sslyze", action="store_true", help="Preform SSLyze scan on the host.")
+    parser.add_argument("--testssl", action="store_true", help="Perform TestSSL scan on the host.")
+    parser.add_argument("-f", "--full", action="store_true", help="Perform full scan on the host.")
     parser.add_argument("-t", "--target", help="Host to scan")
 
     args = parser.parse_args()
